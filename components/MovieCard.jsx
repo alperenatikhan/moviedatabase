@@ -28,6 +28,8 @@ function MovieCard(props) {
      <div style={{padding:"1rem 0 0 1.5rem"}}>
          <p className="card-header-title">
      {data.title} </p>
+
+     <p>{movieImage} </p>
     
             <p> <GiTrophyCup style={{color:"orangered", margin:"0.2rem"}}/> IMDB Rank: <strong>{data.rank}</strong>
             <span>
