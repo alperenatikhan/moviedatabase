@@ -4,6 +4,7 @@ import MovieCard from "../components/MovieCard";
 import {BiCameraMovie} from "react-icons/bi";
 import {FaSearchPlus} from "react-icons/fa";
 import {Carousel} from "react-bootstrap";
+import Image from 'next/image'
 
 export default function Home() {
   let movieData=[];
@@ -40,7 +41,7 @@ useEffect(() =>{
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className="header" style={{display:"flex", justifyContent:"center",alignItems:"center", margin:"1rem auto"}}>
-        <img src="https://images.unsplash.com/photo-1560109947-543149eceb16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80" style={{width:"100px",height:"150px", marginRight:"2vw"}} />
+        <Image src="https://images.unsplash.com/photo-1560109947-543149eceb16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80" style={{width:"100px",height:"150px", marginRight:"2vw"}} />
         
         <h1 className="text is-size-3" style={{color:"#d00000"}}>
           Welcome to Cine-Wiki </h1>
@@ -66,7 +67,7 @@ Search for Movies
        
    
         <Carousel variant="dark">
-     {data.slice(start,end).map(item =><Carousel.Item interval={3000}><MovieCard key= {item.id} data={item}/></Carousel.Item>)}
+     {data.slice(start,end).map(item =><Carousel.Item interval={3000} key={item.id}><MovieCard key= {item.id} data={item}/></Carousel.Item>)}
      </Carousel>
 
      </div>

@@ -5,6 +5,7 @@ import {Carousel, Card} from 'react-bootstrap'
 import {RiStarSFill} from 'react-icons/ri'
 import {GiTrophyCup} from 'react-icons/gi'
 import {BiCameraMovie, BiMovie} from "react-icons/bi";
+import Image from 'next/image';
 
 
 
@@ -25,7 +26,7 @@ function MovieCard(props) {
  <Card style={{height:"28rem", width:"25rem"}} >
             <Card.Img variant="top" src= {image} style={{height:"12rem"}} />
      <div style={{padding:"1rem 0 0 1.5rem"}}>
-         <p class="card-header-title">
+         <p className="card-header-title">
      {data.title} </p>
     
             <p> <GiTrophyCup style={{color:"orangered", margin:"0.2rem"}}/> IMDB Rank: <strong>{data.rank}</strong>
