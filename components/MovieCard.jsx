@@ -12,19 +12,19 @@ import Image from 'next/image';
 function MovieCard(props) {
     let data = props.data;
     
-    let [image,setImage]= useState("");
+    let [movieImage,setMovieImage]= useState("");
     let id = data.id;
 
     useEffect(() => {
         fetch(`http://www.omdbapi.com/?i=${id}&apikey=e4737124`).then(data=> data.json()).then(data => setImage(data.Poster))
-    }, [data])
+    }, [])
 
 
 
     return (
  <>
  <Card style={{height:"28rem", width:"25rem"}} >
-            <Card.Img variant="top" src= {image} style={{height:"12rem"}} />
+            <Card.Img variant="top" src= {movieImage} style={{height:"12rem"}} />
      <div style={{padding:"1rem 0 0 1.5rem"}}>
          <p className="card-header-title">
      {data.title} </p>
