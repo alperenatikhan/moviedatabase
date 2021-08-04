@@ -5,6 +5,7 @@ import {Carousel, Card} from 'react-bootstrap'
 import {RiStarSFill} from 'react-icons/ri'
 import {GiTrophyCup} from 'react-icons/gi'
 import {BiCameraMovie, BiMovie} from "react-icons/bi";
+import Image from 'next/image';
 
 
 
