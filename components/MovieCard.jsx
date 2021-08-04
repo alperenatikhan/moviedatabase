@@ -17,7 +17,7 @@ function MovieCard(props) {
 
     useEffect(() => {
         fetch(`http://www.omdbapi.com/?i=${id}&apikey=e4737124`).then(data=> data.json()).then(data => setImage(data.Poster))
-    }, [image])
+    }, [data])
 
 
 
