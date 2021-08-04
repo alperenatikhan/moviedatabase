@@ -16,8 +16,8 @@ function MovieCard(props) {
     let id = data.id;
 
     useEffect(() => {
-        fetch(`http://www.omdbapi.com/?i=${id}&apikey=e4737124`).then(data=> data.json()).then(data => setImage(data.Poster))
-    }, [])
+        fetch(`http://www.omdbapi.com/?i=${id}&apikey=e4737124`).then(data=> data.json()).then(data => setMovieImage(data.Poster))
+    }, [id])
 
 
 
