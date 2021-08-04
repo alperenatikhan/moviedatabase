@@ -4,11 +4,7 @@ import MovieCard from "../components/MovieCard";
 import {BiCameraMovie} from "react-icons/bi";
 import {FaSearchPlus} from "react-icons/fa";
 import {Carousel} from "react-bootstrap";
-<<<<<<< HEAD
-import Image from "next/image"
-=======
-import Image from 'next/image'
->>>>>>> new
+import Image from "next/image";
 
 export default function Home() {
   let movieData=[];
